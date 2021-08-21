@@ -1,0 +1,17 @@
+html, body {
+    font-family: serif;
+}
+body {
+    margin: 20px;
+}
+
+.wrap{
+    width: 75vw;
+    height: 75vh;
+    /* border: 1px dashed gray; */
+    padding: 20px;
+}
+.sel-wrap{
+    /* border: 1px dashed gray; */
+    padding-left: 90px;
+}
