@@ -65,12 +65,20 @@ document.querySelector('.b-3').addEventListener('click', f3);
 
 function f4() {
 
+    let allOut4 = document.querySelectorAll('.out-4');
+      for( item of allOut4){
+
+        console.log(item.textContent = '4')
+           
+      }
+
 }
 
 document.querySelector('.b-4').addEventListener('click', f4);
 
 // Task 5
-//При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив куда входят элементы из a5 большие 7.
+//При нажатии .b-5 выполняете функцию f5. Функция должна с помощью for of перебрать массив a5 и возвратить новый массив
+//  куда входят элементы из a5 большие 7.
 
 let a5 = [3, 4, 5, 2, 1, 7, 8, 2, 4, 6, 8, 11, 23, 17];
 
