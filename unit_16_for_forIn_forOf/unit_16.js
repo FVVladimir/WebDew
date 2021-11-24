@@ -110,6 +110,18 @@ let a6 = [[1, 2], [3, 4], [5, 6]];
 
 function f6() {
 
+    let a6_1 = [];
+
+    for(i = 0; i < a6.length; i = i + 1) {
+
+        for(j = 0; j < a6[i].length; j = j + 1){
+            
+             a6_1.push(a6[i][j])
+        }
+    }
+
+    document.querySelector('.out-6').textContent = a6_1.join(' ')
+
 }
 
 document.querySelector('.b-6').addEventListener('click', f6);
@@ -122,7 +134,21 @@ document.querySelector('.b-6').addEventListener('click', f6);
 
 let a7 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
-function f7() {
+function f7() { 
+
+    let a7_1 = {} 
+
+      for(i = 0; i < a7.length; i = i + 1){        
+         
+        let id = a7[i]['id'];
+        let name = a7[i]['name'];
+
+        a7_1[id] = name;
+       
+        } 
+        
+        a7 = a7_1;
+         return a7_1;
 
 }
 
@@ -140,6 +166,16 @@ let a8 = [{ id: 23, name: 'Ivan' }, { id: 45, name: 'Petr' }];
 
 function f8() {
 
+    let a8_1 = [];
+
+    for(i = 0; i < a8.length; i++){
+
+        a8_1.push(a8[i]['id']);
+    }
+
+    a8 = a8_1;
+   
+    return a8;
 }
 
 document.querySelector('.b-8').addEventListener('click', () => {
@@ -147,11 +183,32 @@ document.querySelector('.b-8').addEventListener('click', () => {
 });
 
 // Task 9
-//При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый большой индекс из вложенных в a9 массивов. В данном случае это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.
+//При нажатии .b-9 выполняете функцию f9. Функция должна возвращать в out-9 самый большой индекс из вложенных в a9 массивов.
+//В данном случае это 4. Т.е. самый большой вложенный массив это [0,0,0,0,0], а в нем самый большой индекс 4.
 
 let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
+
+         let arr = [];
+
+       for(i = 0; i < a9.length; i++){
+            
+          arr.push(a9[i].length - 1);
+          
+       }
+
+       let maxIndex = 0;
+
+       for(i = 0; i <= arr.length; i++){        
+            
+           if(maxIndex <= arr[i]){
+              
+            maxIndex = arr[i]          
+        }
+       }
+
+       return maxIndex;
 
 }
 
