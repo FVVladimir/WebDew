@@ -190,23 +190,28 @@ let a9 = [[4, 3, 2], [2, 5], [0, 0, 0, 0, 0]];
 
 function f9() {
 
-         let arr = [];
+    //      let arr = [];
 
-       for(i = 0; i < a9.length; i++){
+    //    for(i = 0; i < a9.length; i++){
             
-          arr.push(a9[i].length - 1);
+    //       arr.push(a9[i].length - 1);
           
-       }
+    //    }
 
        let maxIndex = 0;
 
-       for(i = 0; i <= arr.length; i++){        
+       for(i = 0; i <= a9.length; i++){            
+        
+        console.log(a9[i].length - 1)
             
-           if(maxIndex <= arr[i]){
+           if(maxIndex <= a9[i].length - 1){
               
-            maxIndex = arr[i]          
+            maxIndex = a9[i];            
         }
+
        }
+
+       console.log(maxIndex)
 
        return maxIndex;
 
@@ -217,7 +222,9 @@ document.querySelector('.b-9').addEventListener('click', () => {
 });
 
 // Task 10
-//При нажатии .b-10 выполняете функцию f10. Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.
+//При нажатии .b-10 выполняете функцию f10.
+//Функция должна преобразовывать массив a10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"}
+//и возвращать полученный массив.
 
 let a10 = [4, 6, 9, 'Hello'];
 
@@ -230,7 +237,9 @@ document.querySelector('.b-10').addEventListener('click', () => {
 });
 
 // Task 11
-//При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения, которые больше 10. Вывод - через пробел.
+//При нажатии .b-11 выполняете функцию f11.
+//Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения,
+//которые больше 10. Вывод - через пробел.
 
 let a11 = {
     one: 11,
