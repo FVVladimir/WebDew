@@ -1,4 +1,4 @@
-let a1_res = [], a2_res = [], a3_res = [], a4_res = [], a5_res = [], a6_res = [], a7_res = [], a8_res, a9_res = '', a10_res = '';
+let a1_res = [], a2_res = [], a3_res = [], a4_res = [], a5_res = [], a6_res = [], a7_res = [], a8_res, a9_res = '', a10_res = '?';
 
 // Task 1 ============================================
 /* <p>Дан массив a1 = [4,5,6,7,12,34,56,78,90,11] - с помощью forEach переберите массив
@@ -164,12 +164,25 @@ function t9() {
     let a9 = [['hi', 'mahai'], ['test', 'best']];      
 
        a9_res = a9.forEach( elem => {
-        
-        a9_res +=  elem + '-';
 
-         document.querySelector('.out-9').textContent = a9_res;
-       
-    })      
+           elem.forEach( elem => {
+
+            a9_res +=  elem + '-';
+              
+        })        
+
+         document.querySelector('.out-9').textContent = a9_res;       
+    })   
+    
+    //    for(i = 0; i < a9.length; i++){           
+             
+    //          for(k = 0; k <= a9[i].length - 1; k++){
+
+    //             a9_res += a9[i][k] + '-';                
+    //          }
+    //    }
+
+    //    document.querySelector('.out-9').textContent = a9_res.trim();
          
 }
       document.querySelector('.b-9').onclick = t9;       
@@ -182,7 +195,23 @@ function t9() {
 //  Разделитель - амперсанд. Результат присвойте a10_res.
 //  Запускаться решение должно при вызове функции t10. Допускается лишний амперсанд в конце строки!!! */
 
-function t10() {
+let a10 = {
+     name: 'ivan',
+     age: 15,
+     sex: 1,
+     id: 45
+    };
+
+function t10() {    
+    
+    
+   for (let key in a10){
+
+    a10_res += key + '=' + a10[key] + '&';
+
+   }
+
+   document.querySelector('.out-10').textContent = a10_res;
 
 }
 
